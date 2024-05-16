@@ -1,0 +1,324 @@
+\documentclass{article}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{floatrow}
+\usepackage[authordate,backend=bibtex]{biblatex-chicago}
+\geometry{
+	a4paper,
+	left=35mm,
+	top=25mm,
+	bottom=30mm,
+	right=20mm
+}
+\addbibresource{library.bib}
+\linespread{1.5}
+\title{Trends in air quality across London city}
+\author{S18311}
+
+\begin{document}
+	\maketitle
+	
+	
+	
+	\newpage
+	\begin{center}
+	\section{Declaration}
+	\end{center}
+	I do hereby declare that the work reported in this project report was exclusively carried out by me under the supervision of Dr. Mahasen Dehideniya It describes the results of my own independent work except where due reference has been made in the text. No part of this project report has been submitted earlier or concurrently for the same or any other degree.\\
+	\begin{flushleft}
+		Date: 2024-01-30
+	\end{flushleft}
+	
+	\begin{flushright}  % or \raggedleft
+			Ahamed\\
+			Signature
+			
+	\end{flushright}  % or \raggedleft
+	\newpage
+	
+	
+	
+	
+	\begin{center}
+		\section{Content}
+	\end{center}
+	\begin{enumerate}
+		\item Introduction \hspace{10cm} 4
+		
+		\item Literature Review \hspace{9.1cm} 6
+		\item Data
+		\begin{enumerate}
+			\item Structure \hspace{9.6cm} 8
+			\item Analysis \hspace{9.75cm} 9
+		\end{enumerate}
+		\item Interpretationse
+		\item Conclusion \hspace{10cm} 12
+		\item References \hspace{10cm} 13
+	\end{enumerate}
+	\newpage
+	
+	
+	\begin{center}
+		\section{Introduction}
+	\end{center}
+	In this Analysis the main goal is to analyze the variability of the air pollution across the London
+	city.\\ 
+	
+	The health of its residents has long been a worry due to air pollution in London, the capital of the United Kingdom. The air quality in the city is notoriously among the worst in the nation. Since it is home to 9 million of the 67 million people who call the United Kingdom home, high exposure levels pose a health risk to many residents.Nitrogen dioxide ($NO_2$) levels in London air pollution are frequently found to be higher above World Health Organization (WHO) PM2.5 standards as well as UK regulatory limits. Although the nation's capital has made great strides since the historic "pea-soup" Great Smog of 1952 and air pollution is less apparent there, the city is still seriously at risk for the economy and public health.(\textcite{siteairquality})\\
+	
+	The amount of air pollution in London can vary with the seasons. For instance, low winds and cold temperature inversions during the colder winter months might result in emissions becoming trapped near to the ground. Known by many names as a cold temperature inversion, this phenomena can intensify and extend instances of air pollution.\\
+	
+	The main cause of the winter smogs in the UK, also referred to as "pea-soupers," is increased coal burning for heating during cold weather when there is little to no wind. As a result, pollution episodes get longer and worse. The Great Smog of 1952 in London, which lasted for four days in December (5–9) and was characterized by intense pollution brought on by emissions from burning more coal, is one well-known historical example. Eventually, as the weather changed, the haze disappeared. More recently, during a noteworthy four-day smog outbreak in December 1991, NO2 levels in London reached record highs, the highest since tracking began in 1970.\\
+	
+	On the other side, London's warmer summer months may cause outbreaks of summertime haze. These occurrences are typically initiated by sunlight reacting with nitrogen dioxide and hydrocarbons to form ozone. One such instance was in 1995, after a protracted period of high temperatures exceeding 30°C, Greater London saw a notable July haze phenomenon.
+	\newpage
+	
+	Although the air in London's outskirts is frequently cleaner, measured pollution levels are usually greater in the city's core.London accounted for four of the 10 places with the highest reported $NO_2$ values across the UK in 2020, according to recent assessments of $NO_2$ levels. Most of the top 10 places in London with greater $NO_2$ values, suggesting a higher traffic density, are located in central or inner London.
+	
+	 Since 2016 there are many number of programs aimed at reducing air pollution throughout the London. On April 8, 2019, City implemented the first Ultra Low Emission Zone (ULEZ) . Compared to the Low Emission Zone (LEZ), this represents a significant improvement. The ultra-low-emission zone (ULEZ), that imposes fines on vehicles that enter it in contravention of stringent emissions restrictions. \\
+	
+	These penalties apply for the entire week. According to preliminary statistics, the ULEZ has significantly increased NO2 levels, and since it went into effect, it is predicted that NOx emissions related to transportation will have decreased by 35\%. Experts in air quality agree that London is at the forefront of knowledge on ULEZ.
+	
+	\newpage
+	
+
+	\begin{center}
+		\section{Literature Review}
+	\end{center}
+	
+	Understanding the changes and patterns of London's air pollution is the primary objective of this investigation. London's average pollution level is higher than that of other cities. The majority of the experiments are conducted on gases, including $NO_2$, $SO_2$, $NO$, and $O_3$. Thirty-six distinct air monitoring sites throughout London provide the data. Given the time intervals, the period from January 1, 2022, to December 31, 2023, is the primary focus. 
+	\\
+	
+	Given the health risks associated with air pollution in London, it made sense to start by looking at the effects of extended exposure to PM2.5 on mortality. This was the most important factor for health at the time and remains so, especially when taking solid evidence into account. However, it is clear that the total health effects will probably exceed those linked to mortality and prolonged exposure to PM2.5, even though other outcomes—like the long-term impact of NO2 on mortality or effects on hospital admissions—may be less certain or have smaller magnitudes.
+	(\textcite{health}) \\
+	
+	Regarding the viability of the mortality consequences resulting from prolonged exposure to NO2, a crucial question emerges. WHO (2013a) provides a basic overview of this issue and evaluates data from original toxicological and epidemiological investigations rather than depending just on health effect quantification results. While HRAPIE (WHO, 2013b) investigated the extent of the risk by suggesting functions that demonstrate the relationship between concentration changes and changes in mortality risk, REVIHAAP (WHO, 2013a) examined the evidence for hazards (considering if there is an impact on mortality). By using London's population and baseline mortality risk, on the other hand, the current report examines how variations in mortality risk affect the number of deaths and life years.
+	(\textcite{health})\\
+	
+	In wintertime 1958–1972–1979, the relationship between air pollution and mortality in London was studied. Because of the high degree of auto-correlation in the data, auto-regressive models have to be used for the analysis. Even after controlling for temperature and humidity, a highly significant link was still found between mortality and sulfur dioxide or particulate matter on an annual basis as well as an overall scale. A nonlinear relationship without a measurable threshold was shown graphically, and at lower air pollution levels, the exposure-response curve became more pronounced. Particulate matter was still a significant predictor in models containing both pollutants, although its estimated coefficients decreased by about 10\%. On the other hand, sulfur dioxide dropped significantly and lost statistical significance.(\textcite{SCHWARTZ1990})
+	\newpage
+	
+	An increasing amount of data suggests that in many areas where vehicle traffic is a major concern, quantities of particulate matter (PM) and, to some extent, nitrogen oxides ($NO_X$) have not dropped as predicted. Long-term trends at traffic-influenced sites show that $NO_X$ and PM concentrations have either increased or stayed constant, despite emissions inventory calculations indicating a drop in these pollutant concentrations over the past ten years. Because of the complexity of the PM problem—which involves multiple scales and is impacted by secondary PM's long-range transport—meso-scale model predictions must be used in order to improve understanding.However, there is mounting evidence for PM10 that points to a rise in local emissions (Fuller and Green, 2006), and most of the $NO_X$ comes from local sources. As a result, it is critical to evaluate the degree of any discrepancy between emissions and trends in air pollution and to look into whether data analysis can identify particular vehicle types that have a major impact on this problem.
+	
+	
+	We found stable, generally modest correlations (Spearman's rho range: |0.34–0.55|) between modeled noise and air pollution across all London postcodes. The largest ranges were seen in neighborhoods and 1 km grid squares (both with a Spearman's rho range of |0.01–0.87|), whereas Boroughs showed relatively less variance in correlations (Spearman's rho range: |0.21–0.78|). Nevertheless, the correlations varied significantly depending on the spatial unit. It's interesting to see that correlations between exposure tertiles, road distance, and deprivation tertiles were not significantly different.
+	
+	
+	In any epidemiological investigation, especially in complicated urban environments, it is imperative to carefully analyze connections between noise and air pollution at the relevant geographical unit of analysis. In spite of this, low correlations close to highways imply that in London, it is possible to reliably distinguish between the independent impacts of air pollution from traffic and road noise.(\textcite{Fecht2016})\\
+	
+	In summary, the evaluation of London's air quality presents a complex picture influenced by a number of variables. Despite the adoption of measures like the Ultra Low Emissions Zone (ULEZ), which demonstrate a deliberate effort to mitigate air pollution, difficulties still exist. Extended periods of exposure to nitrogen oxides and particulate matter are still concerning, as data indicate that anticipated decreases have not occurred in regions significantly impacted by traffic. The picture becomes more complex due to the complex link between air pollution and noise, which exhibits different correlations in different spatial units. Notwithstanding these difficulties, a route for focused interventions is provided by the capacity to consistently discriminate between the independent effects of traffic-related air pollution and road noise.
+	 Given the diverse urban topography of London, rigorous epidemiological investigations require careful consideration of geographical units. For Londoners' health and the city's sustainable growth, it will be crucial to keep an eye on, comprehend, and resolve air quality-related challenges.\\
+	\newpage
+	
+	
+	\begin{center}
+		\section{Data}
+	\end{center}
+	\subsection{Structure}
+	
+	The data is collected from 36 different air-quality monitoring sites across London. The data is arranged by Date and the location of the monitoring site.\\
+	The fixed data-set contains the following attributes.
+	
+	\begin{itemize}
+		\item code - identification code of the site
+		\item site - name of the site
+		\item latitude - latitude of the site
+		\item longitude - longitude of the site
+		\item parameter name - name of the substance measured
+	\end{itemize}
+	Summary of the dataset:
+	
+	\begin{table}[h]
+		\centering
+		\begin{minipage}{.5\textwidth}
+			\centering
+			\begin{tabular}{|c|c|}
+				\hline
+				Minimum & -4.5 \\
+				\hline
+				Maximum & 1111.10 \\
+				\hline
+				Mean & 50.06 \\
+				\hline
+			\end{tabular}
+			\caption{$NO_X$ and $O_3$}
+			\label{table_nox}
+		\end{minipage}%
+		\begin{minipage}{.5\textwidth}
+			\centering
+			\begin{tabular}{|c|c|}
+				\hline
+				Minimum & -2.00 \\
+				\hline
+				Maximum & 189.6 \\
+				\hline
+				Mean & 5.658 \\
+				\hline
+			\end{tabular}
+			\label{table_o3}
+		\end{minipage}
+	\end{table}
+	
+	\begin{table}[h]
+		\centering
+		\begin{minipage}{.5\textwidth}
+			\centering
+			\begin{tabular}{|c|c|}
+				\hline
+				Minimum & -7.20 \\
+				\hline
+				Maximum & 285.10 \\
+				\hline
+				Mean & 26.51 \\
+				\hline
+			\end{tabular}
+			\caption{$NO_2$ and $NO$}
+			\label{table_no2}
+		\end{minipage}%
+		\begin{minipage}{.5\textwidth}
+			\centering
+			\begin{tabular}{|c|c|}
+				\hline
+				Minimum & -3.30 \\
+				\hline
+				Maximum & 631.50 \\
+				\hline
+				Mean & 15.35 \\
+				\hline
+			\end{tabular}
+			\label{table_no}
+		\end{minipage}
+	\end{table}
+	
+		\begin{table}[h]
+		\centering
+		\begin{minipage}{.5\textwidth}
+			\centering
+			\begin{tabular}{|c|c|}
+				\hline
+				Minimum & -4.90 \\
+				\hline
+				Maximum & 0.1396 \\
+				\hline
+				Mean & 51.50 \\
+				\hline
+			\end{tabular}
+			\caption{$P_2M_5$ and $SO_2$}
+			\label{table_no2}
+		\end{minipage}%
+		\begin{minipage}{.5\textwidth}
+			\centering
+			\begin{tabular}{|c|c|}
+				\hline
+				Minimum & -3.00 \\
+				\hline
+				Maximum & 685.00 \\
+				\hline
+				Mean & 0.8181 \\
+				\hline
+			\end{tabular}
+			\label{table_pm2_5}
+		\end{minipage}
+	\end{table}
+	
+	
+	
+	\newpage
+	\subsection{Analysis}
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width = 5.5in,height = 3.25in]{MonthlyNo2Variation.png}
+		\caption{Variation of No2}
+		\label{figure_1}
+	\end{figure}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width = 5.5in,height = 3.25in]{MonthlyNoVariation.png}
+		\caption{Variation of No}
+		\label{figure_2}
+	\end{figure}
+	
+	The monthly changes of the $NO$ and $NO_2$ gases are depicted in these figures. It is evident that the $NO2$ variation is consistent throughout the year, with mean levels falling between 40 and 50 and outliers occurring between 100 and 120.For $NO$ gas, the mean is almost zero, with outliers appearing from 100 to 120 during the course of the year.
+	\newpage
+	
+	
+	
+
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width = 5.5in,height = 3.25in]{scatterNovsNo2.png}
+		\caption{Correlation between No vs. No2}
+		\label{figure_3}
+	\end{figure}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width = 5.5in,height = 3.25in]{scatterNoxsPm10.png}
+		\caption{Correlation between NOX vs. PM10}
+		\label{figure_5}
+	\end{figure}
+	The scatter plot of $NO_2$ vs. $NO$ shows a correlation and the relationship tends to increase in the months of November and December.\\
+	However, there does not appear to be a strong association between NOx levels and PM10 levels in the scatter plot, and the ones that do appear are primarily from October and September.
+	
+	\newpage
+	\begin{figure}[h]
+		\begin{minipage}{.5\textwidth}
+			\centering
+			\includegraphics[width=2.8in, height=2in]{ealing.png}
+			\caption{Ealing and Greenwich}
+			\label{figure_4}
+		\end{minipage}%
+		\begin{minipage}{.5\textwidth}
+			\centering
+			\includegraphics[width=2.8in, height=2in]{greenwich.png}
+			\label{figure_6}
+		\end{minipage}
+	\end{figure}
+
+	\begin{figure}[h]
+		\begin{minipage}{.5\textwidth}
+			\centering
+			\includegraphics[width=2.8in, height=2in]{brent.png}
+			\caption{Brent and City of london}
+			\label{figure_7}
+		\end{minipage}%
+		\begin{minipage}{.5\textwidth}
+			\centering
+			\includegraphics[width=2.8in, height=2in]{cityoflondon.png}
+			\label{figure_8}
+		\end{minipage}
+	\end{figure}
+	
+	Here, the trend in Ealing and Greenwich air pollution shows that NO gas is present in higher concentrations than other gases.In both places, there is a noticeable increase in air pollution in November and December. Whereas NO is the minimum on Greenwich, Pm10 gas displays the lowest levels in Ealing throughout the year. In Greenwich, all forms of gasses increase in March and September. However, in Ealing There is a small drop in the gasses between April and September.
+	Among the four gases shown, nitrogen oxide, or NO, has consistently decreased across the time period shown in the graph, usually at the lowest level. This is most likely the result of better automotive pollution laws.
+	
+	Nitrogen dioxide, or NO2, levels have been declining over time but are still greater than total NO levels. Given that NO2 is a more harmful pollutant than NO, this decrease may be advantageous.
+	NO and NO2 are combined to form NOX. NOX has the highest concentrations of the four gases shown, but it has also been decreasing over time. PM10 (particulate matter) values are the most variable of the four gases shown. It is likely that NO2 levels are frequently greater than NO levels since NO2 is a more stable pollutant than NO. NOX levels, which are a mixture of NO and NO2, generally match NO2 levels. This suggests that the primary element affecting Brent's NOX levels is NO2. Compared to the other contaminants
+	
+	
+	
+	\begin{center}
+		\section{Conclusion}
+	\end{center}
+
+	The findings emphasize the need for targeted measures to control Greenwich's NO2 levels and
+	
+	Ealing, given that NO2 has been demonstrated to be a consistent and important cause of air pollution. To enhance the quality of the air and decrease the detrimental impacts of pollutants on the health and welfare of the
+	
+	It is imperative for local communities to monitor the relationships among gases and their seasonal variations. According to the research, the laws and continuous monitoring have a good impact.
+	
+		\subsection{Important contaminants:}
+	\begin{itemize}
+		\item NO2: Summer (Jun-Aug) has the lowest levels, winter (Dec-Feb) has the highest. Winter peaks are caused by reduced sunlight, more heating emissions, and the trapping of pollutants by colder weather.
+		\item NOX: Because it combines NO and NO2, it has a pattern that is similar to NO2.
+		\item PM10: Affected by comparable reasons as NO2 and extra sources such wood burning, PM10 is also greater in the winter and decrease in the summer.
+		\item Ozone: The opposite trend, at its peak in the summer when contaminants react with sunshine.
+	\end{itemize}
+	
+	Generally worse in the winter than it is in the summer for the reasons mentioned before.Seasons and London sites differ somewhat from one another.The relationship between NO2 and NOX is evident, however other factors predominate when it comes to PM10 levels.Variations in specific locations and sources also impact the quality of the air in London.London's air quality is impacted by seasonal fluctuations in pollution levels, which are higher in the winter and lower in the summer. The primary causes are NO2, NOX, and PM10, which are impacted by weather, emissions, and sunshine. While there is a discernible downward trend in NO2 and NOX levels, further investigation into PM10 and consideration of other pollutants is necessary to provide a complete understanding of London's air quality.
+	
+	\newpage
+	\printbibliography
+
+\end{document}

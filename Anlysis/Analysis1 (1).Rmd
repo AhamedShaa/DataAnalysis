@@ -1,0 +1,150 @@
+---
+title: "MiniProject"
+author: "S18311"
+date: "2023-12-23"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(skimr)
+library(tinytex)
+library(janitor)
+library(lubridate)
+```
+```{r}
+data_pack1 = read_csv(file = "../Data/london_local_data_2022.csv", col_types = "cccddddddd")
+data_pack2 = read_csv(file = "../Data/london_local_sites.csv", col_types = "ccddc")
+
+```
+
+```{r}
+View(data_pack1)
+View(data_pack2)
+
+nrow(data_pack1)
+
+```
+
+```{r}
+glimpse(data_pack2)
+```
+```{r}
+summary(data_pack)
+```
+```{r}
+glimpse(data_pack1)
+```
+```{r}
+summary(data_pack1)
+```
+```{r}
+data_pack1 = data_pack1 %>%
+  mutate(date =ydm_hms(date))
+  
+```
+```{r}
+skim(data_pack1)
+
+```
+
+```{r}
+data_pack <- full_join(data_pack1,data_pack2)
+View(data_pack)
+data_pack%>%
+  select(o3,pm2_5,so2)%>%
+  filter(is.na(so2))%>%
+  nrow()
+```
+```{r}
+data_pack = data_pack%>%
+  remove_empty(c("cols","rows"))
+
+```
+
+```{r}
+data_pack = data_pack%>%
+  mutate(pm2_5 = ifelse(is.na(pm2_5),0,pm2_5))
+View(data_pack)  
+```
+
+```{r}
+data_pack = data_pack%>%
+  mutate(o3 = ifelse(is.na(o3),0,o3))
+data_pack = data_pack%>%
+  mutate(so2 = ifelse(is.na(so2),0,so2))
+data_pack = data_pack%>%
+  mutate(pm10 = ifelse(is.na(pm10),0,pm10))
+```
+
+```{r}
+skim(data_pack)
+```
+
+```{r}
+data_pack$date <- as.POSIXct(data_pack$date, format = "%Y-%m-%dT%H:%M:%SZ")
+data_pack$day <- day(data_pack$date)
+data_pack$month <- months(data_pack$date)
+#View(data_pack)
+```
+
+-------------------- Analysis-----------------------------------------
+```{r}
+data_pack%>%
+  filter(no2 != 0)%>%
+  ggplot(aes(x = month, y = no2,color = month)) +
+  geom_boxplot() +
+  xlab("Month") +
+  ylab("NO2 Levels") +
+  ggtitle("Seasonal Variation of NO2 Levels")+
+  theme_bw()
+```
+```{r}
+data_pack%>%
+  filter(no != 0)%>%
+  ggplot(aes(x = month, y = no,color = month)) +
+  geom_boxplot() +
+  xlab("Month") +
+  ylab("NO Levels") +
+  ggtitle("Seasonal Variation of NO Levels")+
+  theme_bw()
+```
+
+```{r}
+data_pack%>%
+  filter(!is.na(month))%>%
+  ggplot(aes(x = no2,y = no)) +
+  geom_point(aes(alpha=0.5,color = month)) +
+  geom_smooth(method ="lm", se= FALSE)+
+  xlab("NO2 Levels") +
+  ylab("NO Levels") +
+  ggtitle("Scatter Plot of NO2 vs. NO")+
+  theme_bw()
+```
+
+```{r}
+data_pack%>%
+  filter(no == 0)%>%
+  summarise(n())
+```
+```{r}
+data_pack%>%
+  filter(no2 == 0)%>%
+  summarise(n())
+```
+```{r}
+data_pack%>%
+  filter(!is.na(month),nox != 0,pm10 !=0)%>%
+  ggplot(aes(x = nox,y = pm10)) +
+  geom_point(aes(alpha=0.5,color = month)) +
+  geom_smooth(method ="lm", se= FALSE)+
+  xlab("NOX Levels") +
+  ylab("PM10 Levels") +
+  ggtitle("Scatter Plot of NOX vs. PM10")+
+  theme_bw()
+```
+
